@@ -130,3 +130,161 @@ console.log(person["name"]); // Acessing the name property
 console.log(person.hobbies); 
 console.log(person.hobbies[1])// Acessing the second hobbies
 
+//Alevel grading system
+// loops help us to look through an array and return a specific item 
+let marks = 15;
+if (marks >=80) {
+    console.log("Grade: A")
+} else if (marks >=70) {
+    console.log("Grade: B")
+} else if (marks >=60) {
+    console.log("Grade C")
+}else if (marks >=50) {
+    console.log("Grade D")
+} else if (marks >= 40) {
+    console.log("Grade E")
+} else if(marks >=30) {
+    console.log("Grade o")
+} else (marks <=30) 
+    console.log("Grade F")
+
+
+let scores =[
+{name: "Precious", score: 85},
+{name: "Lebron", score: 56},
+{name: " Alvim", score: 78},
+{name: "liz", score: 65},
+{name: " Remmy", score: 68}
+]
+scores.forEach(student =>{
+    let Grade;
+    if (student.score >= 90) {
+        grade = "A"
+    }else if (student.score >= 80){
+        grade = "B"
+    }else if (student.score >= 70){
+        grade = "C"
+    }else if (student.score >= 60){
+        grade = "D"
+    }else if (student.score >= 50){
+        grade = "E"
+    }else if (student.score >= 40){
+        grade = "O"
+    }else {
+        grade = "F"
+    }
+    console.log(student.name + ";" + student.score+ " And my grade is" + grade)
+})
+
+
+//functions
+// functions are reusable blocks of code that perform a specific task. They can take parameter and return values
+// function declaration //we use the function keyword to declare a function 
+
+function functionName() {
+    //code to be executed
+}
+
+function funcName(parameter) {
+    // code to be executed
+    return parameter; // returning the parameter
+}
+ 
+function funcwithparameter(parameter1, parameter2, parameter3){
+    //code to be executed 
+    return parameter1 + parameter2 + parameter3; // returning the sum of parameters
+}
+
+//working example of a function 
+function returnsomevalues() {
+    let value ="This is my first working function in javascript";
+    console.log(value);
+}
+
+returnsomevalues(); //this is how we call a function to execute the code inside it 
+
+function returnparameter(parameter) {
+    return parameter;
+}
+
+// console.log(returnparameter("Hello,this my second function in javascript"));
+const result = returnparameter("Hello,this is my second function in javascript");
+console.log(result);
+
+function addNumbers(x, y) {
+    return x + y;
+}
+const sum = addNumbers(4, 5);
+console.log(sum);
+
+
+
+//loops
+//1. for loop
+// incrementing for loop
+
+for (let i = 0; i ; i++) {
+    console.log(i);
+}
+
+//decrementing for loop
+for (let i = 7; i > 0; i--) {
+    console.log(i);
+}
+
+const myCars = ["volvo", "Benz", "kia", "toyota"];
+console.log(myCars);
+const numberofCars = myCars.length; //gives you the number of items in the array
+console.log(numberofCars);
+const kiaPosition = myCars.indexOf("kia");
+console.log("The position of kia in the array is" + kiaPosition);
+
+
+for (let i = 0; i < myCars.length; i++) {
+    console.log(myCars[i]);
+}
+
+
+for ( let car of myCars) {
+    function printCarPosition (car){
+    const index =myCars.indexOf(car);
+    console.log("The position of" + car + "in the array is" +index);
+   }
+   printCarPosition(car);
+   console.log(car);
+}
+
+//2. while loop
+// while (condition) {
+    //code to be executed as long as the condition is true
+
+// }
+
+let id = 0;
+while (id < 7) {
+    console.log("from the while loop", id);
+    id++;
+}
+
+//decrementing while loop
+let id2 = 8;
+while (id2 > 0) {
+    console.log("from the while loop", id2);
+    id2--;
+}
+
+
+let password ="";
+ while (password !== "1234") {
+    password = prompt("Enter your password");
+ }
+ //do-while loop
+ // do {
+    //code to be executed
+// } while (condition);
+
+let i = 0;
+do {
+    console.log("from the do-while loop", i);
+    i++;
+} while (i < 7);
